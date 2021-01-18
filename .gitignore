@@ -9,3 +9,5 @@
 node_modules/
 npm-debug.*
 Thumbs.db
+TechMart.code-workspace
+_temp/
