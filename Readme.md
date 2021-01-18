@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Dmitry Pulsha](https://up.htmlacademy.ru/htmlcss/30/user/1599147).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Рябинин](https://htmlacademy.ru/profile/haschish).
 
 ---
 
