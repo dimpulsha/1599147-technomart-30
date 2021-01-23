@@ -8,7 +8,6 @@
 
 <body>
   <header>
-    <!-- хз как нормально хедер делать. пусть пока такой вариант -->
     <div>
       <a class="header-logo"><img src="https://via.placeholder.com/108x18" alt="LOGO" width="108" height="18"></a>
       <form action="#" method="get">
@@ -21,7 +20,7 @@
       <a class="green-button" href="#">Оформить заказ</a>
     </div>
     <div class="header-user-info">
-      <p><i>Интернет-магазин строительных материалов и инструментов для ремонта</i></p>
+      <p class="shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
       <p>
         <a class="header-tel-link" href="tel:+8125550555">+7 (812) 555-05-55</a>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -29,12 +28,6 @@
       <div class="noauth-user">
         <a class="user-button" href="#">Войти</a>
         <a class="user-button" href="#">Регистрация</a>
-      </div>
-      <div class="auth-user">
-        <a class="user-button" href="#">Равжан Джамушович</a>
-        <a class="user-button" href="#"><span class="visually-hidden">Выход</span></a>
-        <a class="user-link" href="#">Мои заказы</a>
-        <a class="user-link" href="#">Личный кабинет</a>
       </div>
     </div>
     <nav class="header-nav">
@@ -71,47 +64,47 @@
         <li class="advantage-list-item">
           <h3>Материалы</h3>
           <a class="advantage-link" href="#">На любой вкус</a>
-          <!--  вот тут сомнения -  ярлык new делаем в разметке и потом скрываем/показываем или  делаем псевдо-элементом ? -->
-          <p>New</p>
-          <!--  рисунок, думаю, фоновый
-           <img src="img/" alt="Материалы"> -->
+          <!--  решили - псевдо элемент. <p>New</p> -->
+          <!--  рисунок фоновый -->
         </li>
         <li class="advantage-list-item">
           <h3>Инструмент</h3>
           <a class="advantage-link" href="#">На все случаи</a>
-          <p>New</p>
         </li>
         <li class="advantage-list-item">
           <h3>Техника</h3>
           <a class="advantage-link" href="#">Для стройки</a>
-          <p>New</p>
         </li>
         <li class="advantage-list-item">
           <h3>Скидки 50%</h3>
           <a class="advantage-link" href="#">На 350 ТОВАРОВ</a>
-          <p>New</p>
         </li>
         <li class="advantage-list-item">
           <h3>Доставка</h3>
           <a class="advantage-link" href="#">Бесплатно</a>
-          <p>New</p>
         </li>
       </ul>
       <div class="promo-slider">
-        <div class="slide-bidy">
-          <h3 class="slider-title">Перфораторы</h3>
-          <p>Настоящие мужские игрушки</p>
-          <img src="https://via.placeholder.com/620x266"
-            alt="Мужчина работает с перфоратором. И пусть весь мир отдохнет" width="620" height="266">
-          <a class="red-button" href="catalog.html">Открыть каталог</a>
-        </div>
-        <div class="slide-bidy">
-          <h3 class="slider-title">Дрели</h3>
-          <p>Соседям на радость!</p>
-          <img src="https://via.placeholder.com/620x266"
-            alt="Мужчина сверлит отверстие в стене. Дрель BOSH - соседи как на ладони." width="620" height="266">
-          <a class="red-button" href="catalog.html">Открыть каталог</a>
-        </div>
+        <ul class="promo-slider-list">
+          <li class="promo-slider-item">
+            <div class="slide-bidy">
+              <h3 class="slider-title">Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <img src="https://via.placeholder.com/620x266"
+                alt="Мужчина работает с перфоратором. И пусть весь мир отдохнет" width="620" height="266">
+              <a class="red-button" href="catalog.html">Открыть каталог</a>
+            </div>
+          </li>
+          <li class="promo-slider-item">
+            <div class="slide-bidy">
+              <h3 class="slider-title">Дрели</h3>
+              <p>Соседям на радость!</p>
+              <img src="https://via.placeholder.com/620x266"
+                alt="Мужчина сверлит отверстие в стене. Дрель BOSH - соседи как на ладони." width="620" height="266">
+              <a class="red-button" href="catalog.html">Открыть каталог</a>
+            </div>
+          </li>
+        </ul>
         <button type="button"><span class="visually-hidden">Назад</span></button>
         <button type="button"><span class="visually-hidden">Вперед</span></button>
       </div>
@@ -125,48 +118,44 @@
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 9000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 9000" width="144" height="128">
-          <!--           по идее s тоже можно в стили вынести -->
-          <p class="old-price"><s>32500 Р.</s></p>
-          <p class="price">25500 Р.</p>
-          <p>New</p>
           <!-- этот див будем подставлять вместо фото -->
           <div>
-            <button class="" type="button">Купить</button>
+            <button type="button">Купить</button>
             <button type="button">В закладки</button>
           </div>
+          <!-- зачеркивание позже перевести на стиль, но проверить на скринридере не помешает -->
+          <p class="old-price"><s>32500 Р.</s></p>
+          <p class="price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 9000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 9000" width="144" height="128">
-          <p class="old-price"><s>25500 Р.</s></p>
-          <p class="price">15500 Р.</p>
-          <p>New</p>
           <div>
-            <button class="" type="button">Купить</button>
+            <button type="button">Купить</button>
             <button type="button">В закладки</button>
           </div>
+          <p class="old-price"><s>25500 Р.</s></p>
+          <p class="price">15500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
           <img src="https://via.placeholder.com/144x128" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
-          <p>New</p>
           <div>
-            <button class="" type="button">Купить</button>
+            <button type="button">Купить</button>
             <button type="button">В закладки</button>
           </div>
+          <p class="old-price"><s>30500 Р.</s></p>
+          <p class="price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
           <img src="https://via.placeholder.com/144x128" alt="" width="144" height="128">
-          <p class="old-price"><s>22500 Р.</s></p>
-          <p class="price">12500 Р.</p>
-          <p>New</p>
           <div>
-            <button class="" type="button">Купить</button>
+            <button type="button">Купить</button>
             <button type="button">В закладки</button>
           </div>
+          <p class="old-price"><s>22500 Р.</s></p>
+          <p class="price">12500 Р.</p>
         </li>
       </ul>
     </section>
@@ -223,6 +212,7 @@
       <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши
         покупки приятными.</p>
       <ul class="service-list">
+        <!-- пока оставим так. при переводе на radio надо соблюдать критерий Б.4.4 : Теги <input> должны быть использованы внутри тега <form>. -->
         <li class="service-item">
           <a class="service-link" href="#">Доставка</a>
         </li>
@@ -233,25 +223,32 @@
           <a class="service-link" href="#">Кредит</a>
         </li>
       </ul>
-      <div class="service-desc">
-        <h3 class="service-title">Доставка</h3>
-        <p>Мы с удовольствием доставим ваш товар прямо
-          к вашему подъезду совершенно бесплатно!
-          Ведь мы неплохо заработаем,
-          поднимая его на ваш этаж!</p>
-      </div>
-      <div class="service-desc">
-        <h3 class="service-title">Гарантия</h3>
-        <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его
-          возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж
-          восстановите как-нибудь сами.</p>
-      </div>
-      <div class="service-desc">
-        <h3 class="service-title">Кредит</h3>
-        <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-        <!--  или кнопка? -->
-        <a class="red-button" href="#">Отправить заявку</a>
-      </div>
+      <ul class="service-slider-list">
+        <li class="service-slider-item">
+          <div class="service-desc">
+            <h3 class="service-title">Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо
+              к вашему подъезду совершенно бесплатно!
+              Ведь мы неплохо заработаем,
+              поднимая его на ваш этаж!</p>
+          </div>
+        </li>
+        <li class="service-slider-item">
+          <div class="service-desc">
+            <h3 class="service-title">Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его
+              возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж
+              восстановите как-нибудь сами.</p>
+          </div>
+        </li>
+        <li class="service-slider-item">
+          <div class="service-desc">
+            <h3 class="service-title">Кредит</h3>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+            <a class="red-button" href="#">Отправить заявку</a>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="about">
       <h2 class="section-title">Компания «Техномарт»</h2>
