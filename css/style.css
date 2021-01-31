@@ -61,6 +61,8 @@
   --user-link-active-fill: #161D29;
   --social-fill: #212A3A;
   --service-link-shadow: #405069;
+  --user-button-click: #C5C5C5;
+  --pagination-hover: #C5C5C5;
   /* фон заголовков и секций */
   --gray-basic: #F1F5F7;
   --section-head-fill: #F9F5F0;
@@ -154,6 +156,22 @@ img {
   background-color: var(--red-button-click);
 }
 
+/* хлебные крошки */
+
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs-link {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black-basic);
+}
+
 /* хедер */
 
 .main-header {
@@ -181,6 +199,7 @@ img {
 .user-search {
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 /* проблема в файрфоксе - всё равно серый плейсхолдер*/
@@ -202,6 +221,10 @@ img {
 .user-link:active {
   background-color: var(--user-link-active-fill);
   opacity: 0.5;
+}
+
+.user-link.not-empty {
+  background-color: var(--red-basic);
 }
 
 .user-order {
@@ -251,8 +274,22 @@ img {
   color: var(--red-basic);
 }
 
-.noauth-user .user-sign-button:active {
-  color: var(--link-hover-fill);
+.noauth-user .user-sign-button:active, .auth-user .user-sign-button:active {
+  color: var(--user-button-click);
+}
+
+.user-page-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-blue-basic);
+}
+
+.user-page-link:hover, .user-page-link:focus {
+  color: var(--red-basic);
+}
+
+.user-page-link:active {
+  color: var(--user-button-click);
 }
 
 /* хедер. навигация */
@@ -392,6 +429,13 @@ img {
 }
 
 /* каталог */
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ /* text-align: center; */
+}
 
 .product-item {
   border: 1px solid var(--gray-border);
@@ -561,3 +605,116 @@ img {
   line-height: 18px;
 }
 
+/* каталог */
+
+.catalog-head {
+  background-color: var(--catalog-head-fill);
+}
+
+.catalog-form, .catalog-sort {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.catalog-form-head, .catalog-sort, .price-select {
+  background-color: var(--filer-fill);
+}
+
+.filter-title {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form-legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+input[name="txt-price-min"], input[name="txt-price-max"] {
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  border: none;
+  background-color: var(--filer-fill);
+}
+
+.form-label {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.filter-button {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid var(--button-border);
+}
+
+.filter-button:active {
+  color: var(--black-basic);
+}
+
+.sort-param-list, .sort-kind-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-param-link {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--black-basic);
+  opacity: 0.3;
+}
+
+.sort-param-item.selected .sort-param-link {
+  color: var(--red-basic);
+  opacity: 1;
+}
+
+.sort-param-item:not(.selected) {
+  border-bottom: 1px dotted var(--red-basic);
+}
+
+.sort-param-item:hover {
+  border-bottom: 1px solid var(--red-basic);
+}
+
+.pagination-list {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-item{
+  border: 1px solid var(--button-border);
+  border-radius: 2px;
+}
+.pagination-item a{
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black-basic);
+}
+.pagination-item:hover, .pagination-item:focus{
+  border: 1px solid var(--pagination-hover);
+}
+.pagination-item:active{
+  border: 1px solid var(--red-basic);
+}
+.pagination-item.current{
+  background-color: var(--red-basic);
+}
+.pagination-item.current a{
+  color: var(--white-basic);
+}
+.product-info{
+  background-color: var(--gray-basic);
+}

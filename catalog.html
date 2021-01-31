@@ -21,15 +21,15 @@
         <input class="user-search" type="search" id="site-search-id" name="site-search" placeholder="Поиск:">
       </form>
       <a class="button user-link" href="#">Закладки: <span>0</span></a>
-      <a class="button user-link active" href="#">Корзина: <span>10</span></a>
+      <a class="button user-link not-empty" href="#">Корзина: <span>10</span></a>
       <a class="button user-order" href="#">Оформить заказ</a>
     </div>
     <div class="header-user-info">
       <p class="shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-      <p class="shop-contacts">
-        <a class="header-tel-link" href="tel:+8125550555">+7 (812) 555-05-55</a>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      </p>
+      <div class="shop-contacts">
+        <a class="button header-tel-link" href="tel:+8125550555">+7 (812) 555-05-55</a>
+        <address class="header-addr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+      </div>
       <div class="auth-user">
         <a class="button user-sign-button" href="#">Равжан Джамушович</a>
         <a class="button user-sign-button" href="#"><span class="visually-hidden">Выход</span></a>
@@ -79,27 +79,34 @@
         <a class="breadcrumbs-link">Перфораторы</a>
       </li>
     </ul>
-    <h1 class="section-title">Перфораторы</h1>
+    <div class="catalog-head">
+      <h1 class="section-title">Перфораторы</h1>
+    </div>
     <section class="catalog-form">
-      <h2 lass="filter-title">Фильтр</h2>
+      <div class="catalog-form-head">
+        <h2 class="filter-title">Фильтр:</h2>
+      </div>
       <form method="post" action="https://echo.htmlacademy.ru">
         <fieldset>
           <!--  такой вариант "двойного бегунка" -->
-          <legend class="form-legend">Цена</legend>
-          <input type="range" name="price-min" id="price-min-id" min="0" max="100000" value="0">
-          <input type="range" name="price-max" id="price-max-id" min="0" max="100000" value="100000">
+          <legend class="form-legend">Цена:</legend>
+          <div class="price-select">
+            <input type="range" name="price-min" id="price-min-id" min="0" max="100000" value="0">
+            <input type="range" name="price-max" id="price-max-id" min="0" max="100000" value="100000">
+          </div>
           <label class="form-label" for="txt-price-min-id"><span class="visually-hidden">Цена от:</span></label>
           <input type="text" name="txt-price-min" id="txt-price-min-id" value="0">
           <label class="form-label" for="txt-price-max-id"><span class="visually-hidden">Цена до:</span></label>
           <input type="text" name="txt-price-max" id="txt-price-max-id" value="100000">
+
         </fieldset>
         <fieldset>
-          <legend class="form-legend">Производители</legend>
-          <input type="checkbox" name="filter-manufacturer" id="filter-manufacturer-1-id" value="bosh" checked >
+          <legend class="form-legend">Производители:</legend>
+          <input type="checkbox" name="filter-manufacturer" id="filter-manufacturer-1-id" value="bosh" checked>
           <label class="form-label" for="filter-manufacturer-1-id">BOSCH</label>
           <input type="checkbox" name="filter-manufacturer" id="filter-manufacturer-2-id" value="interskol">
           <label class="form-label" for="filter-manufacturer-2-id">Интерскол</label>
-          <input type="checkbox" name="filter-manufacturer" id="filter-manufacturer-3-id" value="makita" checked >
+          <input type="checkbox" name="filter-manufacturer" id="filter-manufacturer-3-id" value="makita" checked>
           <label class="form-label" for="filter-manufacturer-3-id">Makita</label>
           <input type="checkbox" name="filter-manufacturer" id="ffilter-manufacturer-4-id" value="dewalt">
           <label class="form-label" for="filter-manufacturer-4-id">DeWALT</label>
@@ -107,21 +114,21 @@
           <label class="form-label" for="filter-manufacturer-5-id">Hitachi</label>
         </fieldset>
         <fieldset>
-          <legend class="form-legend">Питание</legend>
+          <legend class="form-legend">Питание:</legend>
           <input type="radio" name="power" id="battery-id" checked value="battery">
           <label class="form-label" for="battery-id">Аккумуляторные </label>
           <input type="radio" name="power" id="power-id" value="power">
           <label class="form-label" for="power-id">Сетевые </label>
         </fieldset>
-        <button class="filter-button" type="submit">Показать</button>
+        <button class="button filter-button" type="submit">Показать</button>
       </form>
     </section>
     <section class="catalog-sort">
-      <h2 class="filter-title">Сортировка</h2>
+      <h2 class="filter-title">Сортировка:</h2>
       <!-- пока я думаю, что 2  независимых списка -  параметр и направление -->
       <ul class="sort-param-list">
-        <li class="sort-param-item">
-          <a class="sort-param-link" href="#">По цене</a>
+        <li class="sort-param-item selected">
+          <a class="sort-param-link " href="#">По цене</a>
         </li>
         <li class="sort-param-item">
           <a class="sort-param-link" href="#">По типу</a>
@@ -131,8 +138,8 @@
         </li>
       </ul>
       <ul class="sort-kind-list">
-        <li class="sort-kind-item">
-          <a class="sort-kind-link" href="#" title="По возрастанию"></a>
+        <li class="sort-kind-item selected">
+          <a class="sort-kind-link " href="#" title="По возрастанию"></a>
         </li>
         <li class="sort-kind-item">
           <a class="sort-kind-link" href="#" title="По убыванию"></a>
@@ -151,8 +158,8 @@
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
           <!-- зачеркивание позже перевести на стиль, но проверить на скринридере не помешает -->
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>30500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
@@ -161,8 +168,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>30500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
@@ -171,8 +178,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>30500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
@@ -181,8 +188,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>30500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 3000</h3>
@@ -191,8 +198,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>15500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>15500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
@@ -201,8 +208,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>30500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
@@ -211,7 +218,7 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="price">12500 Р.</p>
+          <p class="price actual-price">12500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 3000</h3>
@@ -220,8 +227,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>15500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>15500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
@@ -230,8 +237,8 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="old-price"><s>30500 Р.</s></p>
-          <p class="price">25500 Р.</p>
+          <p class="price old-price"><s>30500 Р.</s></p>
+          <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item">
           <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
@@ -240,11 +247,11 @@
             <button class="button buy-button" type="button">Купить</button>
             <button class="button add-bookmark" type="button">В закладки</button>
           </div>
-          <p class="price">12500 Р.</p>
+          <p class="price actual-price">12500 Р.</p>
         </li>
       </ul>
       <ul class="pagination-list">
-        <li class="pagination-item">
+        <li class="pagination-item current">
           <a class="pagination-item-link">1</a>
         </li>
         <li class="pagination-item">
@@ -260,8 +267,8 @@
     </section>
     <section class="product-info">
       <h2 class="section-title">Пара слов о перфораторах</h2>
-      <p class="section-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
-        кирпиче, бетоне и камне.<br>
+      <p class="section-text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления
+        отверстий в кирпиче, бетоне и камне.<br>
         Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
         дрели, шуруповерта и отбойного молотка.<br>
         В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
@@ -270,10 +277,9 @@
   </main>
   <footer class="site-footer">
     <div class="footer-links">
-      <a class="footer-logo" href="#"><img src="img/logo-txt-footer.svg" alt="Логотип компании Техномарт" width="138"
-          height="23"></a>
-      <p class="foter-contact-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812)
-          555-05-55</a> </p>
+      <a class="footer-logo" href="#"><img src="img/logo-full-footer.png" alt="Логотип компании Техномарт" width="220"
+          height="68"></a>
+      <p class="footer-contact-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
       <ul class="footer-nav-list">
         <li class="footer-nav-item">
           <a class="footer-nav-link" href="#">Компания</a>
@@ -293,16 +299,16 @@
       </ul>
       <ul class="production-list">
         <li class="production-item">
-          <a class="foter-production-link" href="#">Материалы</a>
+          <a class="footer-production-link" href="#">Материалы</a>
         </li>
         <li class="production-item">
-          <a class="foter-production-link" href="#">Техника</a>
+          <a class="footer-production-link" href="#">Техника</a>
         </li>
         <li class="production-item">
-          <a class="foter-production-link" href="#">Инструмент</a>
+          <a class="footer-production-link" href="#">Инструмент</a>
         </li>
         <li class="production-item">
-          <a class="foter-production-link" href="#">Спецпредложения</a>
+          <a class="footer-production-link" href="#">Спецпредложения</a>
         </li>
       </ul>
     </div>
@@ -319,10 +325,13 @@
           <a class="social-link" href="#"><span class="visually-hidden">Instagram</span></a>
         </li>
       </ul>
-      <p class="footer-author-text">Обратная связь: <a class="footer-author-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-      <p class="footer-author-text">Разработано — <a class="footer-author-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
+      <p class="footer-author-text">Обратная связь: <a class="footer-author-link"
+          href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+      <p class="footer-author-text">Разработано — <a class="footer-author-link"
+          href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </div>
   </footer>
+
 </body>
 
 </html>
