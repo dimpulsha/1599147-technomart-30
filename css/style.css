@@ -434,7 +434,7 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
- /* text-align: center; */
+  /* text-align: center; */
 }
 
 .product-item {
@@ -628,6 +628,12 @@ img {
   text-transform: uppercase;
 }
 
+/* форма */
+
+.catalog-form fieldset {
+  border: none;
+}
+
 .form-legend {
   font-weight: bold;
   font-size: 17px;
@@ -686,35 +692,40 @@ input[name="txt-price-min"], input[name="txt-price-max"] {
 }
 
 .pagination-list {
-
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.pagination-item{
+.pagination-item {
   border: 1px solid var(--button-border);
   border-radius: 2px;
 }
-.pagination-item a{
+
+.pagination-item a {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--black-basic);
 }
-.pagination-item:hover, .pagination-item:focus{
+
+.pagination-item:hover, .pagination-item:focus {
   border: 1px solid var(--pagination-hover);
 }
-.pagination-item:active{
+
+.pagination-item:active {
   border: 1px solid var(--red-basic);
 }
-.pagination-item.current{
+
+.pagination-item.current {
   background-color: var(--red-basic);
 }
-.pagination-item.current a{
+
+.pagination-item.current a {
   color: var(--white-basic);
 }
-.product-info{
+
+.product-info {
   background-color: var(--gray-basic);
 }
