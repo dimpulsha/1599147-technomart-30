@@ -122,6 +122,20 @@ body {
 
 /* общие настройки */
 
+/* контейнер-центровщик */
+
+.container {
+  width: 940px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 a {
   text-decoration: none;
 }
@@ -174,8 +188,15 @@ img {
 
 /* хедер */
 
+.user-info-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
 .main-header {
   background-color: var(--gray-basic);
+  padding-bottom: 60px;
 }
 
 .user-links-wrapper {
@@ -202,14 +223,10 @@ img {
   outline: none;
 }
 
-/* проблема в файрфоксе - всё равно серый плейсхолдер*/
-
 .user-search::placeholder {
   color: var(--white-basic);
-}
-
-.user-search::-moz-placeholder {
-  color: var(--white-basic);
+  /*  mozilla */
+  opacity: 1;
 }
 
 .user-search:active, .user-search:focus {
@@ -247,7 +264,20 @@ img {
   font-size: 16px;
   line-height: 23px;
   color: var(--red-basic);
+  /*  сетка
+  outline: 1px solid salmon; */
 }
+
+/* .shop-contacts {
+   сетка
+  outline: 1px solid salmon;
+}*/
+
+/* .noauth-user {
+  сетка
+  outline: 1px solid salmon;
+}
+ */
 
 .header-tel-link {
   font-weight: bold;
@@ -268,6 +298,7 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: inherit;
+  background-color: var(--white-basic);
 }
 
 .noauth-user .user-sign-button:hover, .noauth-user .user-sign-button:focus {
@@ -295,6 +326,8 @@ img {
 /* хедер. навигация */
 
 .nav-list {
+  /* !! флексы - на будущее*/
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -316,11 +349,21 @@ img {
 
 /* промоблок */
 
-.advantage-list-item, .promo-slider-list, .slider-pagination-list {
+.promo {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.advantage-list {
   list-style: none;
   padding: 0;
   margin: 0;
   color: var(--white-basic);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "card1 card2 card3" "slider slider card4" "slider slider card5";
 }
 
 .advantage-list-item h3 {
@@ -330,6 +373,7 @@ img {
 }
 
 .advantage-list-item:nth-child(1) {
+  grid-area: card1;
   background-color: var(--yellow-card);
   background-image: url("../img/promo-1.svg");
   background-repeat: no-repeat;
@@ -337,6 +381,7 @@ img {
 }
 
 .advantage-list-item:nth-child(2) {
+  grid-area: card2;
   background-color: var(--blue-card);
   background-image: url("../img/promo-2.svg");
   background-repeat: no-repeat;
@@ -344,6 +389,7 @@ img {
 }
 
 .advantage-list-item:nth-child(3) {
+  grid-area: card3;
   background-color: var(--magenta-card);
   background-image: url("../img/promo-3.svg");
   background-repeat: no-repeat;
@@ -351,6 +397,7 @@ img {
 }
 
 .advantage-list-item:nth-child(4) {
+  grid-area: card4;
   background-color: var(--lifht-dreen-card);
   background-image: url("../img/promo-4.svg");
   background-repeat: no-repeat;
@@ -358,10 +405,17 @@ img {
 }
 
 .advantage-list-item:nth-child(5) {
+  grid-area: card5;
   background-color: var(--yellow-light-card);
   background-image: url("../img/promo-5.svg");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.advantage-list-item.slider-item {
+  grid-area: slider;
+  /* сетка
+  outline: 2px solid olive; */
 }
 
 .advantage-list-item a {
@@ -388,7 +442,16 @@ img {
   background-color: var(--gray-tech-fill);
 }
 
+.promo-slider-list, .slider-pagination-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--white-basic);
+}
+
 .slider-title {
+  margin: 0;
+  /*  padding: 0; */
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
@@ -399,6 +462,7 @@ img {
   background-image: url("../img/slider/slider-perfo.jpg");
   background-repeat: no-repeat;
   /* временная высота  */
+  /*  outline: 2px solid orangered; */
   min-height: 266px;
 }
 
@@ -411,8 +475,13 @@ img {
 
 /* секции */
 
+.best-seller {
+  margin-bottom: 70px;
+}
+
 .section-header {
   background-color: var(--section-head-fill);
+  margin-bottom: 20px;
 }
 
 .section-title, .service-title {
@@ -422,6 +491,8 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--dark-blue-basic);
+  /* обнуляем  отступы для заголовков секций */
+  margin: 0;
 }
 
 .service .section-title, .contact .section-title, .about .section-title {
@@ -434,7 +505,11 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  /* text-align: center; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  /*  временно - перевести на flex */
+  text-align: center;
 }
 
 .product-item {
@@ -501,27 +576,62 @@ img {
 .actual-price {
   background-image: url("../img/red-arrow-btn.svg");
   background-repeat: no-repeat;
+  /* временно */
+  background-position: center;
 }
 
 /* производители */
 
-.manufacturer-list, .service-slider-list, .transport-list, .footer-nav-list, .production-list, .social-list {
+.manufacturer {
+  margin-bottom: 70px;
+}
+
+.service-slider-list, .transport-list, .social-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.manufacturer-link {
-  border: 1px solid var(--gray-border);
+.manufacturer-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.manufacturer-item {
+  border: 1px solid var(--gray-border);
+  /*  временно */
+  /*  text-align: center; */
+}
+
+/* .manufacturer-link {
+  vertical-align: middle;
+  border: 1px solid var(--gray-border);
+} */
 
 /* сервисы */
 
 .service {
   background-color: var(--gray-basic);
+  padding-top: 65px;
+  margin-bottom: 70px;
+}
+
+.service-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+
+.service .section-title {
+  grid-column: 1 / -1;
 }
 
 .section-text {
+  grid-column: 1 / -1;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -571,11 +681,58 @@ img {
 }
  */
 
+/* обертка над двумя последними секциями */
+
+.company-info-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 70px;
+}
+
 /* футер */
 
 .site-footer {
   color: var(--gray-basic);
   background-color: var(--dark-blue-basic);
+}
+
+.footer-links {
+  padding-bottom: 54px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "company nav " "company production";
+}
+
+.footer-company-info {
+  width: 380px;
+  grid-area: company;
+  /*  сетка */
+  /*  outline: 1px solid olive; */
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-area: nav;
+  display: flex;
+  /*  сетка */
+  /*  outline: 1px solid olive; */
+}
+
+.production-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-area: production;
+  display: flex;
+  /*  сетка */
+  /*  outline: 1px solid olive; */
+}
+
+.footer-contact-text {
+  margin-bottom: 0;
 }
 
 .footer-contact-text a, .footer-nav-link {
@@ -603,6 +760,10 @@ img {
   background-color: var(--dark-blue-fill);
   font-size: 16px;
   line-height: 18px;
+}
+
+.copiright-flex-wrapper {
+  display: flex;
 }
 
 /* каталог */
