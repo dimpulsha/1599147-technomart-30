@@ -344,9 +344,14 @@ img {
 .promo {
   margin-top: 60px;
   margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .advantage-list {
+  grid-area: 1 /1/ -1 /-1;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -355,7 +360,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 20px;
-  grid-template-areas: "card1 card2 card3" "slider slider card4" "slider slider card5";
+  grid-template-areas: "card1 card2 card3" ". . card4" ". . card5";
 }
 
 .advantage-list-item h3 {
@@ -403,6 +408,10 @@ img {
   background-repeat: no-repeat;
   background-position: right;
 }
+.advantage-list-item:nth-child(n+6) {
+ /*  z-index: 1; */
+  background-color: var(--lifht-dreen-card);
+}
 
 .advantage-list-item.slider-item {
   grid-area: slider;
@@ -431,6 +440,7 @@ img {
 /* техническая заливка, если фоновая картинка не загрузится */
 
 .promo-slider {
+  grid-area: 2 /1 / 4 /3;
   background-color: var(--gray-tech-fill);
 }
 
