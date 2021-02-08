@@ -63,7 +63,7 @@
   --service-link-shadow: #405069;
   --user-button-click: #C5C5C5;
   --pagination-hover: #C5C5C5;
-  --logo-shadow:rgba(0, 0, 0, 0.24);
+  --logo-shadow: rgba(0, 0, 0, 0.24);
   /* фон заголовков и секций */
   --gray-basic: #F1F5F7;
   --section-head-fill: #F9F5F0;
@@ -186,15 +186,19 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-}
-
-.breadcrumbs-link {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+}
+.breadcrumbs-item{
+margin-right: 40px;
+}
+
+.breadcrumbs-link {
   color: var(--black-basic);
 }
+
 
 /* хедер */
 
@@ -329,10 +333,16 @@ body {
   color: var(--dark-blue-basic);
 }
 
-.noauth-user, .auth-user {
+.noauth-user {
   grid-column: 9 / span 4;
+  text-align: right;
   /*  сетка */
   /* outline: 1px solid green; */
+}
+
+.auth-user {
+  grid-column: 9 / span 4;
+  text-align: center;
 }
 
 .user-sign-button {
@@ -886,15 +896,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-/* сетка */
-/* outline: 1px solid green; */
+  /* сетка */
+  /* outline: 1px solid green; */
 }
 
 .footer-copyright {
   width: 300px;
- /*  padding-top: 36px; */
+  /*  padding-top: 36px; */
   /* сетка */
- /*  outline: 1px solid gold;*/
+  /*  outline: 1px solid gold;*/
 }
 
 .social-list {
@@ -905,14 +915,14 @@ body {
   margin-bottom: 29px;
   /* сетка */
   height: 44px;
- /*  outline: 1px solid gold; */
+  /*  outline: 1px solid gold; */
 }
 
 .footer-author-text {
   margin-left: 37px;
   padding-right: 14px;
   /* сетка */
- /*  outline: 1px solid gold; */
+  /*  outline: 1px solid gold; */
 }
 
 /* страница каталога */
@@ -935,11 +945,8 @@ body {
 .catalog-head {
   grid-area: title;
   background-color: var(--catalog-head-fill);
+  padding: 29px 29px 30px;
   /* outline: 2px solid salmon; */
-}
-
-.catalog-form-head, .price-select {
-  background-color: var(--filer-fill);
 }
 
 /* форма */
@@ -952,7 +959,20 @@ body {
   /*  outline: 2px solid salmon; */
 }
 
-.catalog-form-title, .catalog-sort-title {
+/* .catalog-form-head {
+  margin: 0;
+  padding: 10px 0 10px 18px;
+  background-color: var(--filer-fill);
+} */
+
+.price-select {
+  background-color: var(--filer-fill);
+}
+
+.catalog-form-title {
+  margin: 0;
+  padding: 10px 0 10px 18px;
+  background-color: var(--filer-fill);
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -1000,8 +1020,11 @@ input[name="txt-price-min"], input[name="txt-price-max"] {
 
 .catalog-sort {
   grid-area: sort;
+  padding: 10px 0 10px 19px;
   /* в строчку, на флексах */
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
@@ -1009,16 +1032,65 @@ input[name="txt-price-min"], input[name="txt-price-max"] {
   /* outline: 2px solid salmon; */
 }
 
-.sort-param-list, .sort-kind-list {
+.catalog-sort-title {
+  margin: 0;
+  background-color: var(--filer-fill);
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 140px;
+  /*  сетка */
+  /* outline: 1px solid darkblue; */
+}
+
+.sort-param-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  margin-right: -20px;
+  width: 480px;
+  /*  сетка */
+ /*  outline: 1px solid darkblue; */
+}
+
+.sort-param-item {
+  width: 140px;
+  margin-right: 20px;
+/*   outline: 1px solid darkcyan; */
+}
+
+.sort-param-item:nth-child(3n+1) {
+  text-align: right;
+}
+
+.sort-param-item:nth-child(3n+2) {
+  text-align: center;
+}
+
+.sort-param-item:nth-child(3n+3) {
+  text-align: left;
+}
+
+.sort-kind-list {
+  display: flex;
+  list-style: none;
+  padding: 0 16px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  /*  сетка */
+  /* outline: 1px solid darkblue; */
+  width: 48px;
+  height: 14px;
 }
 
 .sort-param-link {
-  font-size: 13px;
-  line-height: 18px;
   color: var(--black-basic);
   opacity: 0.3;
 }
