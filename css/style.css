@@ -63,6 +63,7 @@
   --service-link-shadow: #405069;
   --user-button-click: #C5C5C5;
   --pagination-hover: #C5C5C5;
+  --logo-shadow:rgba(0, 0, 0, 0.24);
   /* фон заголовков и секций */
   --gray-basic: #F1F5F7;
   --section-head-fill: #F9F5F0;
@@ -136,16 +137,22 @@ body {
   min-height: 100vh;
 }
 
-a {
+.page a {
   text-decoration: none;
 }
 
-img {
+.page p {
+  margin-top: 0;
+}
+
+.page img {
   max-width: 100%;
   height: auto;
+  border: none;
 }
 
 .button {
+  display: inline-block;
   text-align: center;
   vertical-align: middle;
   border: none;
@@ -155,9 +162,11 @@ img {
 /* основная красная кнопка */
 
 .main-button {
-  color: var(--white-basic);
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-size: 14px;
   line-height: 18px;
+  color: var(--white-basic);
   text-transform: uppercase;
   background-color: var(--red-basic);
 }
@@ -192,29 +201,39 @@ img {
 .main-header {
   background-color: var(--gray-basic);
   padding-bottom: 60px;
+  /* color: var(--white-basic); */
 }
 
+/* верхняя часть хедера */
+
 .user-links-wrapper {
+  vertical-align: middle;
   background-color: var(--dark-blue-fill);
 }
 
-.user-links-flex-wrapper {
-  display: flex;
+.user-links-grid-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  grid-template-rows: 42px;
 }
 
-.header-logo {
+.header-logo img {
+  width: 108px;
+  height: 18px;
   background-color: var(--red-basic);
+  box-shadow: inset 0px -5px 0px var(--logo-shadow);
+  padding: 12px 56px 17px 56px;
 }
 
-.header-logo:active {
+.header-logo img.page-head-logo:active {
   background-color: var(--red-button-click);
 }
 
-.user-links-wrapper a {
-  color: var(--white-basic);
-}
-
 /* поле для поиска.  */
+
+/* .user-search-form {
+  width:270px;
+} */
 
 .user-search {
   background-color: transparent;
@@ -234,6 +253,13 @@ img {
   border: none;
 }
 
+.user-link {
+  width: 150px;
+  /* min-height: 42px; */
+  color: var(--white-basic);
+  padding-top: 9px;
+}
+
 .user-link:active {
   background-color: var(--user-link-active-fill);
   opacity: 0.5;
@@ -244,7 +270,11 @@ img {
 }
 
 .user-order {
+  width: 150px;
+  padding-top: 9px;
+  /* min-height: 42px; */
   background-color: var(--green-basis);
+  color: var(--white-basic);
 }
 
 .user-order:hover, .user-order:focus {
@@ -260,15 +290,28 @@ img {
 
 .user-info-grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
+  padding-top: 43px;
+  padding-bottom: 40px;
 }
 
 .shop-description {
+  grid-column: 1 / span 4;
+  margin: 0;
+  padding-left: 30px;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   color: var(--red-basic);
+  /*  сетка */
+  /* outline: 1px solid green; */
+}
+
+.shop-contacts {
+  grid-column: 5 / span 4;
+  /*  сетка */
+  /* outline: 1px solid green;*/
 }
 
 .header-tel-link {
@@ -284,6 +327,12 @@ img {
   font-size: 14px;
   line-height: 24px;
   color: var(--dark-blue-basic);
+}
+
+.noauth-user, .auth-user {
+  grid-column: 9 / span 4;
+  /*  сетка */
+  /* outline: 1px solid green; */
 }
 
 .user-sign-button {
@@ -318,23 +367,26 @@ img {
 /* хедер. навигация */
 
 .nav-list {
-  /* !! флексы - на будущее*/
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  padding: 0;
+  padding: 0 26px 0 29px;
   margin: 0;
   background-color: var(--dark-blue-basic);
+  box-shadow: inset 0px -5px 0px var(--dark-blue-fill);
 }
 
-.nav-list .nav-link {
+.nav-link {
+  padding: 16px 25px 20px 28px;
   color: var(--white-basic);
 }
 
-.nav-list .nav-link:hover, .nav-list .nav-link:focus {
+.nav-link:hover, .nav-link:focus {
   background-color: var(--dark-blue-fill);
 }
 
-.nav-list .nav-link:active {
+.nav-link:active {
   background-color: var(--nav-menu-active-fill);
   opacity: 0.5;
 }
@@ -408,8 +460,9 @@ img {
   background-repeat: no-repeat;
   background-position: right;
 }
+
 .advantage-list-item:nth-child(n+6) {
- /*  z-index: 1; */
+  /*  z-index: 1; */
   background-color: var(--lifht-dreen-card);
 }
 
@@ -482,8 +535,12 @@ img {
 }
 
 .section-header {
-  background-color: var(--section-head-fill);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
+  padding: 25px 19px 26px 28px;
+  background-color: var(--section-head-fill);
 }
 
 .section-title, .service-title {
@@ -514,11 +571,42 @@ img {
 }
 
 .product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 218px;
-  height: 316px;
+  min-height: 316px;
   margin-right: 20px;
   margin-bottom: 20px;
   border: 1px solid var(--gray-border);
+}
+
+.product-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+  width: 100%;
+  height: 178px;
+  /* сетка */
+  /* outline: 2px solid lightseagreen; */
+}
+
+.product-item:hover .product-img-wrapper {
+  display: none;
+}
+
+.product-item:hover .product-action {
+  display: block;
+}
+
+.product-action {
+  display: none;
+  order: -1;
+  width: 100%;
+  height: 178px;
+  /* сетка */
+  /*  outline: 2px solid rgba(105, 78, 230, 0.5); */
 }
 
 .product-title {
@@ -593,36 +681,12 @@ img {
   margin-bottom: 50px;
 }
 
-/* .manufacturer-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.manufacturer-item {
-  border: 1px solid var(--gray-border); */
-
-/*  временно */
-
-/*  text-align: center;
-}
-*/
-
-/* .manufacturer-link {
-  vertical-align: middle;
-  border: 1px solid var(--gray-border);
-} */
-
 /* реализовано более красивое переполнение на флексах */
 
 .manufacturer-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -635,6 +699,16 @@ img {
   border: 1px solid var(--gray-border);
   margin-bottom: 20px;
   margin-right: 20px;
+}
+
+/* насколько это правильно? */
+
+.manufacturer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 /* сервисы */
@@ -691,7 +765,7 @@ img {
   color: var(--dark-blue-basic);
 }
 
-.service-slider-list, .transport-list, .social-list {
+.service-slider-list, .transport-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -730,13 +804,13 @@ img {
 .footer-links {
   padding-bottom: 54px;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 390px 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "company nav " "company production";
 }
 
 .footer-company-info {
-  width: 380px;
+  /* width: 360px; */
   grid-area: company;
   /*  сетка */
   /*  outline: 1px solid olive; */
@@ -746,10 +820,18 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 37px;
   grid-area: nav;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: -58px;
   /*  сетка */
-  /*  outline: 1px solid olive; */
+  /* outline: 1px solid olive; */
+}
+
+.footer-nav-item {
+  margin-left: 58px;
 }
 
 .production-list {
@@ -758,8 +840,15 @@ img {
   margin: 0;
   grid-area: production;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: -58px;
   /*  сетка */
-  /*  outline: 1px solid olive; */
+  /* outline: 1px solid olive; */
+}
+
+.production-item {
+  margin-left: 58px;
 }
 
 .footer-contact-text {
@@ -795,6 +884,35 @@ img {
 
 .copiright-flex-wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+/* сетка */
+/* outline: 1px solid green; */
+}
+
+.footer-copyright {
+  width: 300px;
+ /*  padding-top: 36px; */
+  /* сетка */
+ /*  outline: 1px solid gold;*/
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 34px;
+  margin-bottom: 29px;
+  /* сетка */
+  height: 44px;
+ /*  outline: 1px solid gold; */
+}
+
+.footer-author-text {
+  margin-left: 37px;
+  padding-right: 14px;
+  /* сетка */
+ /*  outline: 1px solid gold; */
 }
 
 /* страница каталога */
