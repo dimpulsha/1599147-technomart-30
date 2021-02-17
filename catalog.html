@@ -22,8 +22,8 @@
           <label class="visually-hidden" for="site-search-id">Поиск:</label>
           <input class="user-search" type="search" id="site-search-id" name="site-search" placeholder="Поиск:">
         </form>
-        <a class="button user-link" href="#">Закладки: <span>0</span></a>
-        <a class="button user-link not-empty" href="#">Корзина: <span>10</span></a>
+        <a class="button user-link bookmark-link" href="#">Закладки: <span>0</span></a>
+        <a class="button user-link cart-link not-empty" href="#">Корзина: <span>10</span></a>
         <a class="button user-order" href="#">Оформить заказ</a>
       </div>
     </div>
@@ -35,13 +35,14 @@
           <address class="header-addr">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="auth-user">
-          <div>
-            <a class="button user-sign-button" href="#">Равжан Джамушович</a>
-            <a class="button user-sign-button" href="#"><span class="visually-hidden">Выход</span></a>
+          <div class="account-pad-wrapper">
+            <a class="button user-sign-button account-button" href="#">Равжан Джамушович</a>
+            <a class="button user-sign-button sign-out-button" href="#"><span class="visually-hidden">Выход</span>ww</a>
           </div>
-          <div>
-            <a class="user-page-link" href="#">Мои заказы</a>
-            <a class="user-page-link" href="#">Личный кабинет</a>
+          <div class="account-pad-wrapper">
+            <a class="user-page-link auth-user-order" href="#">Мои заказы</a>
+            <a class="user-page-link auth-user-cabinet" href="#">Личный кабинет</a>
+            <div class="point"></div>
           </div>
         </div>
       </div>
@@ -76,7 +77,9 @@
     <div class="container catalog-grid-wrapper">
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html" title="Главная"></a>
+          <a class="breadcrumbs-link" href="index.html" title="Главная">
+            <img src="img/ico-page-svg/icon-home.svg"
+              alt="Переход на главную страницу" width="14px" height="12px"></a>
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
@@ -165,11 +168,11 @@
           </li>
         </ul>
         <ul class="sort-kind-list">
-          <li class="sort-kind-item selected">
-            <a class="sort-kind-link " href="#" title="По возрастанию"></a>
+          <li class="sort-kind-item">
+            <a class="sort-kind-link up-sort selected " href="#" title="По возрастанию"></a>
           </li>
           <li class="sort-kind-item">
-            <a class="sort-kind-link" href="#" title="По убыванию"></a>
+            <a class="sort-kind-link down-sort" href="#" title="По убыванию"></a>
           </li>
         </ul>
       </section>
@@ -202,7 +205,7 @@
             <p class="price old-price"><s>30500 Р.</s></p>
             <p class="price actual-price">25500 Р.</p>
           </li>
-          <li class="product-item">
+          <li class="product-item new">
             <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
             <div class="product-img-wrapper">
               <img src="img/product/bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
@@ -238,7 +241,7 @@
             <p class="price old-price"><s>30500 Р.</s></p>
             <p class="price actual-price">25500 Р.</p>
           </li>
-          <li class="product-item">
+          <li class="product-item new">
             <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
             <div class="product-img-wrapper">
               <img src="img/product/bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
@@ -274,7 +277,7 @@
             <p class="price old-price"><s>30500 Р.</s></p>
             <p class="price actual-price">25500 Р.</p>
           </li>
-          <li class="product-item">
+          <li class="product-item new">
             <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
             <div class="product-img-wrapper">
               <img src="img/product/bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
@@ -362,13 +365,13 @@
         <p class="footer-copyright">© 2010–2019 Компания «Техномарт» <br>Все права защищены</p>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link" href="#"><span class="visually-hidden">ВКонтакте</span></a>
+            <a class="button social-link social-vk" href="#"><span class="visually-hidden">ВКонтакте</span></a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="#"><span class="visually-hidden">Facebook</span></a>
+            <a class="button social-link social-fb" href="#"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="#"><span class="visually-hidden">Instagram</span></a>
+            <a class="button social-link social-ig" href="#"><span class="visually-hidden">Instagram</span></a>
           </li>
         </ul>
         <p class="footer-author-text">Обратная связь: <br><a class="footer-author-link"
