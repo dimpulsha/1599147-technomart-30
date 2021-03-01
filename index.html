@@ -146,7 +146,9 @@
       </header>
       <ul class="product-list">
         <li class="product-item" data-product="BFG9000">
-          <h3 class="product-title">Перфоратор BOSCH<br>BFG 9000</h3>
+          <a href="#">
+            <h3 class="product-title">Перфоратор BOSCH<br>BFG 9000</h3>
+          </a>
           <div class="product-img-wrapper">
             <img src="img/product/bfg-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
           </div>
@@ -159,7 +161,9 @@
           <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item new" data-product="BFG3000">
-          <h3 class="product-title">Перфоратор BOSCH<br>BFG 3000</h3>
+          <a href="#">
+            <h3 class="product-title">Перфоратор BOSCH<br>BFG 3000</h3>
+          </a>
           <div class="product-img-wrapper">
             <img src="img/product/bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
           </div>
@@ -171,7 +175,9 @@
           <p class="price actual-price">15500 Р.</p>
         </li>
         <li class="product-item" data-product="BFG6000">
-          <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
+          <a href="#">
+            <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
+          </a>
           <div class="product-img-wrapper">
             <img src="img/product/bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
           </div>
@@ -183,7 +189,9 @@
           <p class="price actual-price">25500 Р.</p>
         </li>
         <li class="product-item new" data-product="BFG2000">
-          <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
+          <a href="#">
+            <h3 class="product-title">Перфоратор BOSCH<br>BFG 2000</h3>
+          </a>
           <div class="product-img-wrapper">
             <img src="img/product/bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
           </div>
@@ -310,7 +318,8 @@
           заехав в наш офис:</p>
         <!-- 1. клик по ней приводит к переходу на сервис карт
           2. Клик по ней открывает модальное окно с полноразмерной интерактивной картой -->
-        <a class="button contact-map" href="#">
+        <a class="button contact-map" href="https://goo.gl/maps/xF1NkCsTLzHroeAp9" target="_blank"
+          rel="noopener noreferrer">
           <img src="img/map-small.png" alt="Как нас найти. Карта" width="300" height="158">
         </a>
         <button class="button main-button get-lost-button" type="button">Заблудились? Напишите нам!</button>
@@ -394,7 +403,7 @@
         </div>
         <div class="text-area">
           <label for="text-id">Текст письма:</label>
-          <textarea class="message-body" name="text" id="text-id" cols="70" rows="5"
+          <textarea class="message-body" name="text" id="text-id" cols="70" rows="4"
             placeholder="В свободной форме"></textarea>
         </div>
       </div>
@@ -412,9 +421,13 @@
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <div>
-      <img src="img/big-map.png" alt="Карта местонахождения: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-    </div>
+    <!--  <div> -->
+    <!--  <img src="img/big-map.png" alt="Офис компании расположен по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"> -->
+    <!--  </div> -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716190262!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614578318325!5m2!1sru!2sru"
+      width="943" height="449" allowfullscreen loading="lazy"
+      title="Офис компании расположен по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
     <button class="button modal-map-close" type="button" aria-label="Закрыть окно">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
