@@ -119,14 +119,14 @@
             <a class="button main-button slider-catalog-button" href="catalog.html">Открыть каталог</a>
           </li>
         </ul>
-        <button class="button slider-back-button" type="button"><span class="visually-hidden">Назад</span>
+        <button class="button slider-back-button" type="button" aria-label="Назад">
           <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M19.9244 0.941406L21.9226 2.98921L4.90699 20.436L21.978 37.9375L19.9789 39.9853L0.910645 20.436L19.9244 0.941406Z"
               fill="white" />
           </svg>
         </button>
-        <button class="button slider-forward-button" type="button"><span class="visually-hidden">Вперед</span>
+        <button class="button slider-forward-button" type="button" aria-label="Вперед">
           <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M19.9244 0.941406L21.9226 2.98921L4.90699 20.436L21.978 37.9375L19.9789 39.9853L0.910645 20.436L19.9244 0.941406Z"
@@ -379,6 +379,50 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal-write">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+
+    <form class="modal-write-form" action="#send to academy" method="POST">
+      <div class="input-field-wrapper">
+        <div class="name-area">
+          <label for="name-id">Ваше имя:</label>
+          <input type="text" name="name" id="name-id" placeholder="Имя Фамилия" required>
+        </div>
+        <div class="mail-area">
+          <label for="email-id">Ваш e-mail:</label>
+          <input type="email" id="email-id" placeholder="email@example.com" required>
+        </div>
+        <div class="text-area">
+          <label for="text-id">Текст письма:</label>
+          <textarea class="message-body" name="text" id="text-id" cols="70" rows="5"
+            placeholder="В свободной форме"></textarea>
+        </div>
+      </div>
+      <div class="send-wrapper">
+        <button class="button main-button send-msg-button" type="submit">Отправить</button>
+      </div>
+    </form>
+    <button class="button modal-write-close" type="button" aria-label="Закрыть окно">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+          fill="#EE3643" />
+      </svg>
+    </button>
+  </section>
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <div>
+      <img src="img/big-map.png" alt="Карта местонахождения: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    </div>
+    <button class="button modal-map-close" type="button" aria-label="Закрыть окно">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+          fill="#EE3643" />
+      </svg>
+    </button>
+  </section>
 </body>
 
 </html>
