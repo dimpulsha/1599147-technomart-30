@@ -154,12 +154,6 @@ a {
   text-decoration: none;
 }
 
-/* обнулить маржины для p по разделам */
-
-/* .page p {
-  margin-top: 0;
-} */
-
 img {
   max-width: 100%;
   border: none;
@@ -225,18 +219,15 @@ img {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  /*  outline: 1px solid blueviolet; */
 }
 
 .breadcrumbs-item {
   position: relative;
   margin-right: 41px;
-  /*   outline: 1px solid var(--red-basic); */
 }
 
 .breadcrumbs-item:last-child {
   margin-right: 0;
-  /*  outline: 1px solid var(--red-basic); */
 }
 
 .breadcrumbs-item:not(:last-child):after {
@@ -248,7 +239,6 @@ img {
   height: 14px;
   background-image: url("../img/ico-page-svg/icon-right-small.svg");
   background-repeat: no-repeat;
-  /*   outline: 1px solid #3BBCE3; */
 }
 
 .breadcrumbs-link {
@@ -387,6 +377,7 @@ img {
   padding-right: 21px;
   background-color: var(--red-basic);
 }
+
 .bookmark-link.not-empty {
   background-color: var(--red-basic);
 }
@@ -415,7 +406,6 @@ img {
   column-gap: 20px;
   padding-top: 42px;
   margin-bottom: 35px;
-  /* padding-bottom: 35px; */
 }
 
 .shop-description {
@@ -427,15 +417,11 @@ img {
   font-size: 16px;
   line-height: 24px;
   color: var(--red-basic);
-  /*  сетка */
-  /* outline: 1px solid green; */
 }
 
 .shop-contacts {
   grid-column: 5 / span 4;
   margin-top: 4px;
-  /*  сетка */
-  /* outline: 1px solid green;*/
 }
 
 .header-tel-link {
@@ -477,15 +463,11 @@ img {
   justify-content: flex-end;
   align-items: flex-start;
   margin-top: 4px;
-  /*  сетка */
-  /* outline: 1px solid green; */
 }
 
 .auth-user {
   grid-column: 9 / span 4;
   text-align: center;
-  /*  сетка */
-  /* outline: 1px solid green; */
 }
 
 .user-sign-button {
@@ -494,8 +476,6 @@ img {
   line-height: 21px;
   color: inherit;
   background-color: var(--white-basic);
-  /*   сетка */
-  /* outline: 1px solid goldenrod; */
 }
 
 .sign-in-button {
@@ -540,8 +520,6 @@ img {
 
 .account-button {
   flex-grow: 1;
-  /*   сетка */
-  /*  outline: 1px solid rgb(228, 78, 190); */
 }
 
 .account-button svg {
@@ -599,13 +577,10 @@ img {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
   justify-content: flex-start;
   list-style: none;
-  /* padding: 0 20px 0 20px; */
   padding: 0px;
   padding-left: 27px;
-  /*  padding-right: 25px; */
   margin: 0;
   background-color: var(--dark-blue-basic);
   box-shadow: inset 0px -5px 0px var(--dark-blue-fill);
@@ -756,8 +731,6 @@ img {
 
 /* промоблок. слайдер. */
 
-/* техническая заливка, если фоновая картинка не загрузится */
-
 .promo-slider {
   position: relative;
   grid-area: 2 / 1 / 4 / 3;
@@ -792,8 +765,6 @@ img {
   top: 201px;
   left: 24px;
   width: 192px;
-  /*  margin-left: 24px;
-  margin-bottom: 27px; */
 }
 
 .slider-back-button {
@@ -897,17 +868,10 @@ img {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  /* padding-bottom: 30px; */
   margin: 0;
   margin-bottom: 29px;
   margin-right: -20px;
-  /* text-align: center; */
 }
-
-/* .product-list p {
-  margin-top: 0;
-}
- */
 
 .product-item {
   position: relative;
@@ -924,7 +888,7 @@ img {
   overflow: hidden;
 }
 
-.product-item a{
+.product-item a {
   color: inherit;
 }
 
@@ -1090,8 +1054,6 @@ img {
   background-position: 15px;
 }
 
-/*проверить главную */
-
 .best-seller .product-item:first-child .actual-price {
   margin-left: 4px;
 }
@@ -1099,7 +1061,6 @@ img {
 /* производители */
 
 .manufacturer {
-  /*  с учетом отступа во флексах получается 50px */
   margin-bottom: 50px;
 }
 
@@ -1157,7 +1118,7 @@ img {
   box-shadow: 0px 4px 20px var(--main-shadow);
 }
 
-.manufacturer-item:active{
+.manufacturer-item:active {
   opacity: 0.5;
 }
 
@@ -1381,8 +1342,6 @@ img {
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-left: -59px;
-  /*  сетка */
-  /* outline: 1px solid olive; */
 }
 
 .footer-nav-item {
@@ -1502,15 +1461,12 @@ img {
 
 .catalog-page-main .breadcrumbs {
   grid-area: brcrmbs;
-  /* margin-left: -1px; */
-  /*  outline: 2px solid salmon; */
 }
 
 .catalog-head {
   grid-area: title;
   background-color: var(--catalog-head-fill);
   padding: 29px 29px 29px;
-  /* outline: 2px solid salmon; */
 }
 
 /* форма */
@@ -1520,7 +1476,6 @@ img {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  /*  outline: 2px solid salmon; */
 }
 
 .catalog-form-title {
@@ -1552,7 +1507,6 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-  /* border-bottom: 1px solid var(--gray-border); */
 }
 
 .filter-devide-line {
@@ -1563,8 +1517,6 @@ img {
 
 .catalog-form .price-fieldset {
   margin-top: 13px;
-  /*  margin-bottom: 16px; */
-  /* outline: 1px solid lawngreen; */
 }
 
 .price-fieldset .form-legend {
@@ -1798,7 +1750,6 @@ input[name="txt-price-min"] {
 .catalog-sort {
   grid-area: sort;
   padding: 10px 0 10px 20px;
-  /* в строчку, на флексах */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1807,7 +1758,6 @@ input[name="txt-price-min"] {
   font-weight: normal;
   text-transform: uppercase;
   background-color: var(--filer-fill);
-  /* outline: 2px solid salmon; */
 }
 
 .catalog-sort-title {
@@ -1818,8 +1768,6 @@ input[name="txt-price-min"] {
   line-height: 18px;
   text-transform: uppercase;
   width: 139px;
-  /*  сетка */
-  /* outline: 1px solid darkblue; */
 }
 
 .sort-param-list {
@@ -1833,15 +1781,12 @@ input[name="txt-price-min"] {
   line-height: 18px;
   margin-right: -20px;
   width: 480px;
-  /*  сетка */
-  /*  outline: 1px solid darkblue; */
 }
 
 .sort-param-item {
   box-sizing: border-box;
   width: 140px;
   margin-right: 20px;
-  /*   outline: 1px solid darkcyan; */
 }
 
 .sort-param-item:nth-child(3n+1) {
@@ -1887,8 +1832,6 @@ input[name="txt-price-min"] {
   padding: 0 16px;
   font-size: 13px;
   line-height: 18px;
-  /*  сетка */
-  /*  outline: 1px solid darkblue; */
 }
 
 .sort-kind-link {
@@ -1994,16 +1937,15 @@ input[name="txt-price-min"] {
   background-color: var(--white-basic);
   box-shadow: 0px 4px 20px var(--main-shadow);
   border-top: 7px solid var(--red-basic);
-  /*  outline: 1px solid black; */
 }
 
-.modal-show{
+.modal-show {
   display: block;
 }
 
 .modal-write {
   display: none;
-  top:150px;
+  top: 150px;
   bottom: auto;
   width: 620px;
 }
@@ -2080,16 +2022,17 @@ input[name="txt-price-min"] {
 
 .modal-map {
   display: none;
-  top:150px;
+  top: 150px;
   bottom: auto;
   width: 943px;
   height: 449px;
 }
 
-.modal-map img{
+.modal-map img {
   display: block;
 }
-.modal-map iframe{
+
+.modal-map iframe {
   border: none;
 }
 
@@ -2113,7 +2056,7 @@ input[name="txt-price-min"] {
 
 .modal-cart {
   display: none;
-  top:150px;
+  top: 150px;
   bottom: auto;
   width: 620px;
 }
@@ -2151,11 +2094,11 @@ input[name="txt-price-min"] {
   color: var(--black-basic);
 }
 
-.continue-button:hover, .continue-button:focus{
+.continue-button:hover, .continue-button:focus {
   background-color: var(--check-hover);
 }
 
-.continue-button:active{
+.continue-button:active {
   background-color: var(--green-active);
   outline: 2px solid var(--gray-tech-fill);
 }
@@ -2167,6 +2110,7 @@ input[name="txt-price-min"] {
   top: 48px;
   left: 81px;
 }
+
 .modal-cart .modal-cart-close {
   position: absolute;
   width: 21px;
@@ -2176,6 +2120,7 @@ input[name="txt-price-min"] {
   margin: 0;
   padding: 0;
 }
+
 .modal-cart-close:hover path, .modal-cart-close:focus path {
   fill: var(--red-button-hover);
 }
