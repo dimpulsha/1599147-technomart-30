@@ -1997,6 +1997,10 @@ input[name="txt-price-min"] {
   /*  outline: 1px solid black; */
 }
 
+.modal-show{
+  display: block;
+}
+
 .modal-write {
   display: none;
   top:150px;
