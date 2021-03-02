@@ -150,13 +150,12 @@
             <h3 class="product-title">Перфоратор BOSCH<br>BFG 9000</h3>
           </a>
           <div class="product-img-wrapper">
-            <img src="img/product/bfg-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
+            <img src="img/product/bfg-9000.jpg" alt="" width="184" height="164">
           </div>
           <div class="product-action">
-            <button class="button buy-button" type="button">Купить</button>
-            <button class="button add-bookmark" type="button">В закладки</button>
+            <button class="button buy-button" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 9000 в корзину">Купить</button>
+            <button class="button add-bookmark" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 9000 в закладки">В закладки</button>
           </div>
-          <!-- зачеркивание позже перевести на стиль, но проверить на скринридере не помешает -->
           <p class="price old-price"><s>32500 Р.</s></p>
           <p class="price actual-price">25500 Р.</p>
         </li>
@@ -165,11 +164,11 @@
             <h3 class="product-title">Перфоратор BOSCH<br>BFG 3000</h3>
           </a>
           <div class="product-img-wrapper">
-            <img src="img/product/bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+            <img src="img/product/bfg-3000.jpg" alt="" width="127" height="112">
           </div>
           <div class="product-action">
-            <button class="button buy-button" type="button">Купить</button>
-            <button class="button add-bookmark" type="button">В закладки</button>
+            <button class="button buy-button" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 3000 в корзину">Купить</button>
+            <button class="button add-bookmark" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 3000 в закладки">В закладки</button>
           </div>
           <p class="price old-price"><s>22500 Р.</s></p>
           <p class="price actual-price">15500 Р.</p>
@@ -179,11 +178,11 @@
             <h3 class="product-title">Перфоратор BOSCH<br>BFG 6000</h3>
           </a>
           <div class="product-img-wrapper">
-            <img src="img/product/bfg-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
+            <img src="img/product/bfg-6000.jpg" alt="" width="144" height="128">
           </div>
           <div class="product-action">
-            <button class="button buy-button" type="button">Купить</button>
-            <button class="button add-bookmark" type="button">В закладки</button>
+            <button class="button buy-button" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+            <button class="button add-bookmark" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
           </div>
           <p class="price old-price"><s>30500 Р.</s></p>
           <p class="price actual-price">25500 Р.</p>
@@ -196,10 +195,10 @@
             <img src="img/product/bfg-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
           </div>
           <div class="product-action">
-            <button class="button buy-button" type="button">Купить</button>
-            <button class="button add-bookmark" type="button">В закладки</button>
+            <button class="button buy-button" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 2000 в корзину">Купить</button>
+            <button class="button add-bookmark" type="button" aria-label="Добавить товар Перфоратор BOSCH BFG 2000 в закладки">В закладки</button>
           </div>
-          <p class="price old-price"><s>22500 Р.</s></p>
+          <p class="price old-price" ><s>22500 Р.</s></p>
           <p class="price actual-price">12500 Р.</p>
         </li>
       </ul>
@@ -316,11 +315,9 @@
         <h2 class="section-title">Контакты</h2>
         <p class="section-text">Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <!-- 1. клик по ней приводит к переходу на сервис карт
-          2. Клик по ней открывает модальное окно с полноразмерной интерактивной картой -->
         <a class="button contact-map" href="https://goo.gl/maps/xF1NkCsTLzHroeAp9" target="_blank"
           rel="noopener noreferrer">
-          <img src="img/map-small.png" alt="Как нас найти. Карта" width="300" height="158">
+          <img src="img/map-small.png" alt="Карта.Офис компании расположен по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
         </a>
         <button class="button main-button get-lost-button" type="button">Заблудились? Напишите нам!</button>
       </section>
@@ -390,8 +387,7 @@
   </footer>
   <section class="modal modal-write">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-
-    <form class="modal-write-form" action="#send to academy" method="POST">
+    <form class="modal-write-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="input-field-wrapper">
         <div class="name-area">
           <label for="name-id">Ваше имя:</label>
@@ -421,9 +417,6 @@
   </section>
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <!--  <div> -->
-    <!--  <img src="img/big-map.png" alt="Офис компании расположен по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"> -->
-    <!--  </div> -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716190262!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1614578318325!5m2!1sru!2sru"
       width="943" height="449" allowfullscreen loading="lazy"

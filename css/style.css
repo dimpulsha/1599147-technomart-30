@@ -1153,11 +1153,11 @@ img {
   margin-left: 2px;
 }
 
-.manufacturer-item:hover, .manufacturer-item:focus {
+.manufacturer-item:hover, .manufacturer-item:focus-within {
   box-shadow: 0px 4px 20px var(--main-shadow);
 }
 
-.manufacturer-item:active, .manufacturer-item:focus {
+.manufacturer-item:active{
   opacity: 0.5;
 }
 
