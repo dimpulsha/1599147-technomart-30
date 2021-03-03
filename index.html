@@ -104,14 +104,14 @@
       </ul>
       <div class="promo-slider">
         <ul class="promo-slider-list">
-          <li class="promo-slider-item">
+          <li class="promo-slider-item promo-slide-1">
             <div class="slide-text-layer">
               <h3 class="slider-title">Дрели</h3>
               <p class="slider-text">Соседям на радость!</p>
             </div>
             <a class="button main-button slider-catalog-button" href="catalog.html">Открыть каталог</a>
           </li>
-          <li class="promo-slider-item active-slider">
+          <li class="promo-slider-item promo-slide-2 active-slider">
             <div class="slide-text-layer">
               <h3 class="slider-title">Перфораторы</h3>
               <p class="slider-text">Настоящие мужские игрушки</p>
@@ -134,8 +134,9 @@
           </svg>
         </button>
         <div class="slider-pagination-control">
-          <button class="pagination-piont" type="button" aria-label="Первый слайд"></button>
-          <button class="pagination-piont active-slider" type="button" aria-label="Второй слайд"></button>
+          <button class="pagination-piont promo-slide1-point" type="button" aria-label="Первый слайд"></button>
+          <button class="pagination-piont promo-slide2-point active-slider" type="button"
+            aria-label="Второй слайд"></button>
         </div>
       </div>
     </section>
@@ -405,12 +406,12 @@
         </div>
         <div class="mail-area">
           <label for="email-id">Ваш e-mail:</label>
-          <input type="email" id="email-id" placeholder="email@example.com" required>
+          <input type="email" id="email-id" name="email" placeholder="email@example.com" required>
         </div>
         <div class="text-area">
           <label for="text-id">Текст письма:</label>
-          <textarea class="message-body" name="text" id="text-id" cols="70" rows="4"
-            placeholder="В свободной форме"></textarea>
+          <textarea class="message-body" name="text" id="text-id" cols="70" rows="4" placeholder="В свободной форме"
+            required></textarea>
         </div>
       </div>
       <div class="send-wrapper">
@@ -439,6 +440,25 @@
       </svg>
     </button>
   </section>
+  <section class="modal modal-cart">
+    <h2 class="visually-hidden">Инфрмация о добавлении товара в карзину</h2>
+    <div class="cart-msg">
+      <img class="ok-modal-img" src="img/ico-page-svg/icon-mark.svg" alt="" width="66" height="66">
+      <p class="popup-msg-txt">Товар добавлен в корзину!</p>
+    </div>
+    <div class="action-button">
+      <button class="button main-button order-button" type="button">Оформить заказ</button>
+      <button class="button main-button continue-button" type="button">Продолжить покупки</button>
+    </div>
+    <button class="button modal-cart-close" type="button" aria-label="Закрыть окно">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+          fill="#EE3643" />
+      </svg>
+    </button>
+  </section>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

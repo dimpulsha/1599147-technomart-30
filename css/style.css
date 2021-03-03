@@ -110,6 +110,7 @@
   --check-hover: #B5B5B5;
   --check-nocheck: #C5C5C5;
   --popup-button-border: #C5C5C5;
+  --button-focus-outline: #ABABAB;
 }
 
 body {
@@ -164,6 +165,13 @@ img {
   text-align: center;
   border: none;
   background-color: transparent;
+}
+
+.button:active{
+  outline:none;
+}
+.button:focus{
+  outline-color: var(--button-focus-outline);
 }
 
 /* основная красная кнопка */
@@ -526,7 +534,7 @@ img {
   padding: 2px 23px 0px 13px;
 }
 
-.account-button:hover path {
+.account-button:hover path, .account-button:focus path  {
   fill: var(--user-button-fill);
 }
 
@@ -773,6 +781,7 @@ img {
   left: 18px;
   width: 22px;
   height: 40px;
+  cursor: pointer;
 }
 
 .slider-forward-button {
@@ -782,6 +791,7 @@ img {
   width: 22px;
   height: 40px;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 
 .slider-pagination-control {
@@ -802,6 +812,7 @@ img {
   background-color: var(--white-basic);
   border: 2px solid var(--white-basic);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .pagination-piont.active-slider {
@@ -1187,13 +1198,14 @@ img {
   color: var(--white-basic);
   background-color: var(--dark-blue-basic);
   box-shadow: 0px 1px 0px var(--dark-blue-fill), inset 0px 1px 0px var( --service-link-shadow);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .service-button.active {
   color: var(--dark-blue-basic);
   background-color: var(--white-basic);
   box-shadow: 0px 1px 0px var(--white-basic);
+  cursor: default;
 }
 
 .service-title {
@@ -1389,10 +1401,12 @@ img {
 }
 
 .copiright {
+  position: relative;
   color: var(--white-basic);
   background-color: var(--dark-blue-fill);
   font-size: 16px;
   line-height: 18px;
+  z-index: 3;
 }
 
 .copiright-flex-wrapper {
@@ -1928,6 +1942,7 @@ input[name="txt-price-min"] {
 /* модальные окна */
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -1937,14 +1952,31 @@ input[name="txt-price-min"] {
   background-color: var(--white-basic);
   box-shadow: 0px 4px 20px var(--main-shadow);
   border-top: 7px solid var(--red-basic);
+ /*  z-index: 3; */
+}
+
+/* анимация */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(2500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .modal-show {
   display: block;
 }
 
+.modal-write.modal-show, .modal-map.modal-show{
+  animation-name: bounce;
+  animation-duration: 1s;
+  z-index: 2;
+}
+
 .modal-write {
-  display: none;
   top: 150px;
   bottom: auto;
   width: 620px;
@@ -2021,7 +2053,6 @@ input[name="txt-price-min"] {
 }
 
 .modal-map {
-  display: none;
   top: 150px;
   bottom: auto;
   width: 943px;
@@ -2055,7 +2086,7 @@ input[name="txt-price-min"] {
 }
 
 .modal-cart {
-  display: none;
+  /* display: block; */
   top: 150px;
   bottom: auto;
   width: 620px;
