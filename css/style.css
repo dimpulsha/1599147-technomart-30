@@ -987,7 +987,7 @@ img {
 .buy-button {
   position: relative;
   width: 135px;
-  margin: 38px auto 10px 41px;
+  margin: 37px auto 10px 40px;
   padding: 10px 53px;
   font-size: 14px;
   line-height: 18px;
@@ -1019,7 +1019,7 @@ img {
 }
 
 .add-bookmark {
-  margin: 0 auto 10px 41px;
+  margin: 0 auto 10px 40px;
   width: 135px;
   padding: 8px 0 6px;
   font-size: 14px;
@@ -1144,7 +1144,7 @@ img {
 /* сервисы */
 
 .service {
-  margin-bottom: 71px;
+  margin-bottom: 70px;
   padding-top: 64px;
   background-color: var(--gray-basic);
 }
@@ -1157,7 +1157,7 @@ img {
 
 .service-section-head {
   grid-area: service-head;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
 }
 
 .section-text {
@@ -1166,6 +1166,10 @@ img {
   line-height: 24px;
   margin-top: 23px;
   margin-bottom: 1px;
+}
+
+.service .section-text{
+  line-height: 25px;
 }
 
 .service-list {
@@ -1190,7 +1194,7 @@ img {
 .service-button {
   width: 240px;
   min-height: 61px;
-  padding: 13px 0 17px 23px;
+  padding: 14px 0 18px 23px;
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -1272,12 +1276,12 @@ img {
 .transport-list {
   list-style: none;
   padding: 0;
-  margin: 4px 0 20px;
+  margin: 2px 0 19px;
 }
 
 .transport-list li {
   position: relative;
-  margin-bottom: 11px;
+  margin-bottom: 12px;
   margin-left: 37px;
 }
 
@@ -1285,7 +1289,7 @@ img {
   content: "";
   position: absolute;
   left: -37px;
-  top: 12px;
+  top: 11px;
   width: 25px;
   height: 2px;
   background-color: var(--red-basic);
@@ -1298,11 +1302,12 @@ img {
 
 .about .section-text {
   width: 460px;
-  line-height: 24px;
+  margin-top: 24px;
 }
 
 .about .transport-text {
-  margin-top: 26px;
+/*   margin-top: 26px; */
+  line-height: 25px;
 }
 
 .contact {
@@ -1337,9 +1342,11 @@ img {
   grid-template-columns: 390px 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: "company nav " "company production";
-  padding-bottom: 53px;
+  padding-bottom: 55px;
 }
-
+.catalog-footer .footer-links{
+  padding-bottom: 51px;
+}
 .footer-company-info {
   grid-area: company;
 }
@@ -1354,6 +1361,10 @@ img {
   flex-wrap: wrap;
   justify-content: flex-end;
   margin-left: -59px;
+}
+
+.catalog-footer .footer-nav-list{
+  margin-top: 37px;
 }
 
 .footer-nav-item {
@@ -1377,7 +1388,7 @@ img {
 }
 
 .footer-contact-text {
-  margin: 17px 0 0 3px;
+  margin: 16px 0 0 3px;
 }
 
 .footer-contact-text a, .footer-nav-link {
@@ -1415,6 +1426,10 @@ img {
   align-items: center;
 }
 
+.catalog-footer .copiright-flex-wrapper{
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
 .footer-copyright {
   width: 309px;
   padding: 2px;
@@ -1427,12 +1442,12 @@ img {
   padding: 0;
   margin: 0 auto;
   margin-top: 34px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .social-link {
-  width: 43px;
-  height: 43px;
+  width: 42px;
+  height: 42px;
   margin-right: 2px;
   border-radius: 50%;
   background-repeat: no-repeat;
